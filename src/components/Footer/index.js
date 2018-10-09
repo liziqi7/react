@@ -1,11 +1,10 @@
 import React from 'react'
-// import {Row, Col} from 'antd'
 
 export default class Footer extends React.Component{
     render(){
         return (
-            <div>
-               this is Footer
+            <div className="footer">
+                版权所有：底部，（推荐使用谷歌浏览器，可以获得更佳操作页面体验） 技术支持：底部
             </div>
         )
     }
