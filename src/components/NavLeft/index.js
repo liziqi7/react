@@ -1,10 +1,11 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
 import MenuConfig from '../../config/menuConfig'
 
 import { Menu } from 'antd';
-const SubMenu = Menu.SubMenu;
 
+const SubMenu = Menu.SubMenu;
 export default class NavLeft extends React.Component{
     componentWillMount = () => {
       const menuTreeNode=this.renderMenu(MenuConfig);
@@ -18,6 +19,7 @@ export default class NavLeft extends React.Component{
     //菜单渲染
     renderMenu=(data)=>{
         return  data.map((item)=>{
+            item.key='/admin'+item.key;
             if(item.children){
                 return (
                     <SubMenu key={item.key} title={item.title}>
@@ -25,7 +27,7 @@ export default class NavLeft extends React.Component{
                     </SubMenu>
                 )
             }
-            return <Menu.Item key={item.key} title={item.title}>{item.title}</Menu.Item>
+            return <Menu.Item key={item.key} title={item.title}><Link to={item.key}>{item.title}</Link></Menu.Item>
             
         })
     }
