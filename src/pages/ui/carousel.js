@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card ,Carousel } from 'antd';
-const { Meta } = Card;
+
 export default class Carousels extends React.Component {  
    
     render() {       
