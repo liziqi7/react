@@ -16,6 +16,7 @@ import Logins from './pages/form/login'
 import Register from './pages/form/register'
 import Basic from './pages/table/basic'
 import Hight from './pages/table/high'
+import City from './pages/city'
 
 import { LocaleProvider } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
@@ -43,6 +44,7 @@ export default class IRouter extends React.Component {
                                     <Route path="/admin/form/reg" component={Register} />
                                     <Route path="/admin/table/basic" component={Basic} />
                                     <Route path="/admin/table/high" component={Hight} />
+                                    <Route path="/admin/city" component={City} />
                                     <Route component={NoMatch}></Route>
                                 </Switch>
                             </Admin>
