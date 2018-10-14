@@ -14,13 +14,18 @@ import Gallery from './pages/ui/gallery'
 import Carousel from './pages/ui/carousel'
 import Logins from './pages/form/login'
 import Register from './pages/form/register'
-import Basic from './pages/table/basic.js'
+import Basic from './pages/table/basic'
+import Hight from './pages/table/high'
+
+import { LocaleProvider } from 'antd';
+import zhCN from 'antd/lib/locale-provider/zh_CN';
 
 export default class IRouter extends React.Component {
     render() {
         return (
             <div>
                 <Router>
+                <LocaleProvider locale={zhCN}>
                     <App>
                        <Route path="/login" component={Login} />
                        <Route path="/admin" render={()=>
@@ -37,11 +42,13 @@ export default class IRouter extends React.Component {
                                     <Route path="/admin/form/login" component={Logins} />     
                                     <Route path="/admin/form/reg" component={Register} />
                                     <Route path="/admin/table/basic" component={Basic} />
+                                    <Route path="/admin/table/high" component={Hight} />
                                     <Route component={NoMatch}></Route>
                                 </Switch>
                             </Admin>
                         } />
                     </App>
+                    </LocaleProvider>
                 </Router>
             </div>
         )
