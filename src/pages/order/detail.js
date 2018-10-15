@@ -3,7 +3,8 @@ export default class Detail extends React.Component {
     render() {
         return (
             <div>
-                this is Detail page.{this.props.match.params.orderId}
+                this is Detail page.
+                {/* {this.props.match.params.orderId} */}
             </div>
         )
     }
