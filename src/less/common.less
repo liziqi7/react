@@ -31,85 +31,7 @@ ul,li{
                 margin: 0 0 0 10px;
             }
         }
-    }
-    .header{
-        background-color: @colorM;
-        .header-top{
-            height: 60px;
-            line-height: 60px;
-            padding: 0 20px;
-            text-align: right;
-            .logo{
-                line-height: 60px;
-                text-align: left;
-                font-size: 18px;
-                img{
-                    height: 40px;
-                    vertical-align: middle;
-                }
-                span{
-                    margin-left: 5px;
-                }
-            }
-            a{
-                margin-left: 40px;
-            }
-        }
-        .breadcrumb{
-            height: 40px;
-            line-height: 40px;
-            padding: 0 20px;
-            border-top: 1px solid #f9c700;
-            .breadcrumb-title{
-                text-align: center;
-                font-size: @fontC;                          
-                color: #666;
-                white-space: nowrap;
-                &:after{
-                    position: absolute;
-                    content: '';
-                    left:85px;
-                    top:39px;
-                    border-top: 9px solid @colorM;
-                    border-left: 12px solid transparent;
-                    border-right: 12px solid transparent;
-                }
-            }
-            .weather{
-                text-align: right;
-                font-size: 14px;
-                .date{
-                    margin-right: 10px;
-                    vertical-align: middle;
-                }
-                .weather-img{
-                    img{
-                        height: 15px;
-                    }
-                }
-                .weather-detail{
-                    margin-left: 5px;
-                    vertical-align: middle;
-                }
-            }
-        }
-    }
-    .main{
-        height: calc(100vh);
-        background-color: @colorL;
-        overflow: auto;
-        .card-wrap{
-            margin-bottom: 10px;
-            button{margin-right:10px;}
-            .ant-spin{margin-right: 10px;}
-        }        
-    }
-    .footer{
-        height: 100px;
-        padding: 40px 0;
-        text-align: center;
-        color:@colorJ;
-    }
+    }  
     .content{
         position: relative;
         padding: 20px;
@@ -123,6 +45,84 @@ ul,li{
         }
     }
 
+}
+.header{
+    background-color: @colorM;
+    .header-top{
+        height: 60px;
+        line-height: 60px;
+        padding: 0 20px;
+        text-align: right;
+        .logo{
+            line-height: 60px;
+            text-align: left;
+            font-size: 18px;
+            img{
+                height: 40px;
+                vertical-align: middle;
+            }
+            span{
+                margin-left: 5px;
+            }
+        }
+        a{
+            margin-left: 40px;
+        }
+    }
+    .breadcrumb{
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-top: 1px solid #f9c700;
+        .breadcrumb-title{
+            text-align: center;
+            font-size: @fontC;                          
+            color: #666;
+            white-space: nowrap;
+            &:after{
+                position: absolute;
+                content: '';
+                left:85px;
+                top:39px;
+                border-top: 9px solid @colorM;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+            }
+        }
+        .weather{
+            text-align: right;
+            font-size: 14px;
+            .date{
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+            .weather-img{
+                img{
+                    height: 15px;
+                }
+            }
+            .weather-detail{
+                margin-left: 5px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+.main{
+    height: calc(100vh);
+    background-color: @colorL;
+    overflow: auto;
+    .card-wrap{
+        margin-bottom: 10px;
+        button{margin-right:10px;}
+        .ant-spin{margin-right: 10px;}
+    }        
+}
+.footer{
+    height: 100px;
+    padding: 40px 0;
+    text-align: center;
+    color:@colorJ;
 }
 .vertical-center-modal {
     text-align: center;
@@ -156,4 +156,13 @@ ul,li{
   }
   .slider-warp .ant-carousel .slick-slide {
     height:240px;
+  }
+  .simple-page{
+    .header-top {
+        background: #1890ff;
+        color: #fff;
+        a{
+            color:#fff;
+        }
+    }
   }

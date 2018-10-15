@@ -3,6 +3,7 @@ import { HashRouter as Router, Route,Switch } from 'react-router-dom'
 import App from './App'
 import Login from './pages/Login'
 import Admin from './admin'
+import Common from './common'
 import Buttons from './pages/ui/buttons'
 import NoMatch from './pages/ui/nomatch'
 import Modals from './pages/ui/modals'
@@ -17,10 +18,10 @@ import Register from './pages/form/register'
 import Basic from './pages/table/basic'
 import Hight from './pages/table/high'
 import City from './pages/city'
-
+import Order from './pages/order'
 import { LocaleProvider } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
-
+import orderDetail from './pages/order/detail'
 export default class IRouter extends React.Component {
     render() {
         return (
@@ -29,6 +30,13 @@ export default class IRouter extends React.Component {
                 <LocaleProvider locale={zhCN}>
                     <App>
                        <Route path="/login" component={Login} />
+                       <Route path="/common" render={()=>
+                            <Common>
+                            <Switch>
+                                <Route path="/common/order/detail/:orderId" component={orderDetail}></Route>
+                            </Switch>
+                        </Common>
+                       } />
                        <Route path="/admin" render={()=>
                             <Admin>
                                 <Switch>
@@ -45,6 +53,7 @@ export default class IRouter extends React.Component {
                                     <Route path="/admin/table/basic" component={Basic} />
                                     <Route path="/admin/table/high" component={Hight} />
                                     <Route path="/admin/city" component={City} />
+                                    <Route path="/admin/order" component={Order} />                                    
                                     <Route component={NoMatch}></Route>
                                 </Switch>
                             </Admin>
