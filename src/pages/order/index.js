@@ -117,25 +117,7 @@ export default class City extends React.Component {
         })
     }
     requestList = () => {
-        var _this = this;
-        axios.ajax({
-            url: '/order/list',
-            data: {
-                params: this.params
-            }
-        }).then((res) => {
-            let list = res.list.map((item, index) => {
-                item.key = index;
-                return item;
-            })
-            this.setState({
-                list,
-                pagination: Utils.pagination(res, (current) => {
-                    _this.params.page = current;
-                    _this.requestList();
-                })
-            })
-        })
+        axios.requsetList(this,'/order/list',this.params)
     }   
     render() {
         const columns = [

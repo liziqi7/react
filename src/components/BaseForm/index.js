@@ -16,7 +16,6 @@ class FilterForm extends React.Component {
         this.props.filterSubmit(fieldsValue);
     }
     initFormList = ()=>{
-    debugger;
         const { getFieldDecorator } = this.props.form;
         const formList = this.props.formList;
         const formItemList = [];
@@ -28,7 +27,7 @@ class FilterForm extends React.Component {
                 let placeholder = item.placeholder;
                 let width = item.width;
                 if (item.type == 'DATE'){
-                    const begin_time = <FormItem label="订单时间" key={field}>
+                    const begin_time = <FormItem label="订单时间" key="begin_time">
                         {
                             getFieldDecorator('begin_time')(
                                 <DatePicker showTime={true} placeholder={placeholder} format="YYYY-MM-DD HH:mm:ss"/>
@@ -36,7 +35,7 @@ class FilterForm extends React.Component {
                         }
                     </FormItem>;
                     formItemList.push(begin_time)
-                    const end_time = <FormItem label="~" colon={false} key={field}>
+                    const end_time = <FormItem label="~" colon={false} key="end_time">
                         {
                             getFieldDecorator('end_time')(
                                 <DatePicker showTime={true} placeholder={placeholder} format="YYYY-MM-DD HH:mm:ss" />
@@ -58,12 +57,13 @@ class FilterForm extends React.Component {
                 } else if (item.type == 'SELECT') {
                     const SELECT = <FormItem label={label} key={field}>
                         {
-                            getFieldDecorator([field], {
+                            getFieldDecorator(field, {
                                 initialValue: initialValue
                             })(
-                                <Select
+                                <Select 
                                     style={{ width: width }}
                                     placeholder={placeholder}
+                                    
                                 >
                                     {Utils.getOptionList(item.list)}
                                 </Select>

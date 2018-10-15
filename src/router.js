@@ -37,23 +37,23 @@ export default class IRouter extends React.Component {
                             </Switch>
                         </Common>
                        } />
-                       <Route path="/admin" render={()=>
+                       <Route path="/" render={()=>
                             <Admin>
                                 <Switch>
-                                    <Route path="/admin/ui/buttons" component={Buttons} />
-                                    <Route path="/admin/ui/modals" component={Modals} />
-                                    <Route path="/admin/ui/loadings" component={Loadings} />
-                                    <Route path="/admin/ui/notification" component={Notification} />
-                                    <Route path="/admin/ui/messages" component={Messages} /> 
-                                    <Route path="/admin/ui/tabs" component={Tabs} />   
-                                    <Route path="/admin/ui/gallery" component={Gallery} /> 
-                                    <Route path="/admin/ui/carousel" component={Carousel} />     
-                                    <Route path="/admin/form/login" component={Logins} />     
-                                    <Route path="/admin/form/reg" component={Register} />
-                                    <Route path="/admin/table/basic" component={Basic} />
-                                    <Route path="/admin/table/high" component={Hight} />
-                                    <Route path="/admin/city" component={City} />
-                                    <Route path="/admin/order" component={Order} />                                    
+                                    <Route path="/ui/buttons" component={Buttons} />
+                                    <Route path="/ui/modals" component={Modals} />
+                                    <Route path="/ui/loadings" component={Loadings} />
+                                    <Route path="/ui/notification" component={Notification} />
+                                    <Route path="/ui/messages" component={Messages} /> 
+                                    <Route path="/ui/tabs" component={Tabs} />   
+                                    <Route path="/ui/gallery" component={Gallery} /> 
+                                    <Route path="/ui/carousel" component={Carousel} />     
+                                    <Route path="/form/login" component={Logins} />     
+                                    <Route path="/form/reg" component={Register} />
+                                    <Route path="/table/basic" component={Basic} />
+                                    <Route path="/table/high" component={Hight} />
+                                    <Route path="/city" component={City} />
+                                    <Route path="/order" component={Order} />                                    
                                     <Route component={NoMatch}></Route>
                                 </Switch>
                             </Admin>
